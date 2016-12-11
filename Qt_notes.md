@@ -42,8 +42,9 @@
 ##### Component
 - The first letter of the name of the to-be reused component should be capital. ex: ReuseButton.qml instead of reusedButton.qml
 - The file name of the component is the name applied when reused.
+
 ##### Appendices
-OpenCV3.1.0 + OpenCV_contrib in .pro
+- OpenCV3.1.0 + OpenCV_contrib in .pro
 ```
 INCLUDEPATH += /usr/local/include
 INCLUDEPATH += /usr/local/include/opencv2
@@ -63,7 +64,7 @@ LIBS += -L/usr/local/lib \
      ... Add the libraries you need
 ```
 
-Pylon5 in .pro
+- Pylon5 in .pro
 ```
 INCLUDEPATH += "/Library/Frameworks/pylon.framework/Headers"
 DEPENDPATH += "/Library/Frameworks/pylon.framework/Headers"
