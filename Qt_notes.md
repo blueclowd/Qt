@@ -1,5 +1,6 @@
 # Qt notes
 > Should you have any questions about this content, please email me via: lhungting@gmail.com
+
 ##### {project name}.pro
  - Set the path of libraries in .pro by **INCLUDEPATH** and **LIBS**, it can be manually appened or by Qt creator plugin: right click the project name and select "Add Library...".
  - Add ```QT += widgets serialport``` if you want to use **QtSerialPort** library.
