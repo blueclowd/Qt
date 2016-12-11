@@ -5,6 +5,7 @@
  - Set the path of libraries in .pro by **INCLUDEPATH** and **LIBS**, it can be manually appened or by Qt creator plugin: right click the project name and select "Add Library...".
  - Add ```QT += widgets serialport``` if you want to use **QtSerialPort** library.
  - Exmaple .pro including pylon5 and OpenCV on MacOS
+ 
 ##### qml.qrc
   - The paths of resourses such as images are described in *qml.qrc*.
   - If having an image folder named "images", using the ```source: "images/xxx.png"``` in *.qml* to refer to the images under the folder.
@@ -31,6 +32,7 @@
 ##### Thread
 - Access the contexted object (by ```context->setContextProperty```) lives in different thread directly from GUI is not allowed, consider access the object from an intermediate c++ class lives in the main GUI thread.
 - Get current thread id: ```QThread::currentThreadId```
+
 ##### Date type
 - Casting between QString and string: 
   + QString -> string: ```qString.toStdString()```
