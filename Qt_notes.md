@@ -17,13 +17,14 @@
   - Slots receive the event fired by signals.
   - All the classes which inherit class *QObject* can define signals and slots.
   - Signals and slots are independent, i.e., they don't see each other.
+  - Use connection type **excluding** ```Qt::QueuedConnection``` for vector reference type such as ```vector<Mat>&```
   - Check if ```QObject::connect``` succeed:
     + ``` bool isSuccess = (bool) QObject::connect(...)```
     + Note that the correctness of the meta type registration by ```qRegisterMetaType()``` is not guaranteed by this verification.
   - Flows:
     + The signal is emitted.
     + All slots connected to the emitted signal are executed one after another.
-    + Once all the slots are finished, continue the subsequent works after the the place where emitted the signal.
+    + Execution of the code following the emit statement will occur once all slots have returned. The situation is slightly different when using ```queued connections```; in such a case, the code following the emit keyword will continue immediately, and the slots will be executed later.
   
 ##### QImage & QPixmap
 - Use *QImage* when image processing is necessary. Use *QPixmap* for display.
